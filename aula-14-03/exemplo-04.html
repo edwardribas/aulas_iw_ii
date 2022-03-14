@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- General -->
+    <link rel="stylesheet" href="style.css">
+    <title>IW - Exemplo 04</title>
+</head>
+<body>
+    <p>Welcome!</p>
+
+
+    <script>
+        
+        let nome = prompt('Qual é o seu nome?');
+        let nomeqtd = nome.length;
+        let nomeMaiusculo = nome.toUpperCase();
+        let nomeMinusculo = nome.toLowerCase();
+
+        // let name = {
+        //     n(n){
+        //         return n;
+        //     },
+        //     letras(n){
+        //         return n.length;
+        //     },
+        //     maiusculo(n){
+        //         return n.toUpperCase();
+        //     },
+        //     minusculo(n){
+        //         return  n.toLowerCase();
+        //     }
+        // }
+
+        let paragraph = document.createElement('p');
+        paragraph.innerHTML = `${nome} has ${nomeqtd} letters. <br> Maiúsculo: ${nomeMaiusculo} - Minúsculo: ${nomeMinusculo}`;
+        document.body.appendChild(paragraph)
+
+    </script>
+</body>
+</html>
