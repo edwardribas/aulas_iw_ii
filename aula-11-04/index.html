@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- General -->
+    <title>Events JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <p>Interaja com a caixa.</p>
+    </div>
+
+
+    <script>
+
+        const div = document.querySelector('div');
+
+        // Click Event
+        const click = () => div.innerHTML = "<p>Você clicou.</p>";
+        div.onclick = () => click();
+        
+        // Mouse Enter Event
+        const mouseenter = () => {
+            div.innerHTML = "<p>O mouse está dentro.</p>";
+            div.style.backgroundColor = "green"
+        };
+        div.onmouseenter = () => mouseenter();
+
+        // Mouse Out Event
+        const mouseout = () => {
+            div.innerHTML = "<p>O mouse está fora.</p>";
+            div.style.backgroundColor = "rgb(67, 67, 231)"
+        };
+        div.onmouseout = () => mouseout();
+
+    </script>
+</body>
+</html>

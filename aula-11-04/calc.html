@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- General -->
+    <title>Events JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="number" placeholder="Número 1" step="0.1" id="n1">
+        <input type="number" placeholder="Número 2" step="0.1" id="n2">
+        <select id="select">
+            <option value="1" selected>Soma</option>
+            <option value="2">Subtração</option>
+            <option value="3">Multiplicação</option>
+            <option value="4">Divisão</option>
+        </select>
+        <input type="submit" value="Somar">
+    </form>
+
+    <p></p>
+
+    <script>
+
+        const form = document.querySelector('form');
+        const p = document.querySelector('p')
+        const select = document.querySelector('select')
+
+        form.onsubmit = e => {
+            e.preventDefault();
+            let n1 = Number(document.querySelector("#n1").value);
+            let n2 = Number(document.querySelector("#n2").value);
+
+            // Show Result
+            let selected = select.value;
+            let resultado;
+            switch (selected){
+                case '1':
+                    resultado = ((n1 * 100) + (n2 * 100)) / 100;
+                    p.innerText = resultado;
+                    break;
+                case '2':
+                    resultado = ((n1 * 100) - (n2 * 100)) / 100;
+                    p.innerText = resultado;
+                    break;
+                case '3':
+                    resultado = n1*n2;
+                    p.innerText = resultado;
+                    break;
+                case '4':
+                    resultado = n1/n2;
+                    p.innerText = resultado;
+            }
+        }
+    </script>
+</body>
+</html>

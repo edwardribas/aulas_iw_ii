@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background: linear-gradient(to right, rgb(218, 218, 218), rgb(227, 227, 245), rgb(219, 219, 219));
+}
+
+body > p{
+    color: rgb(82, 82, 82);
+}
+div {
+    width: 90%;
+    max-width: 300px;
+    max-height: 300px;
+    user-select: none;
+    text-align: center;
+    padding: 150px 10px;
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 14px;
+    background-color: rgb(67, 67, 231);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+    transition: transform .3s ease-in-out, background-color .2s ease;
+}
+
+div:active {
+    transform: scale(0.95);
+}
+
+div p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: white;
+    pointer-events: none;
+}
+
+/* Form */
+form{
+    width: 100%;
+    max-width: 400px;
+    padding: 70px 30px;
+    border-radius: 30px;
+    display: flex;
+    background-color: rgb(43, 43, 43);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.123);
+    flex-direction: column;
+}
+form input[type=number]::placeholder{
+    color: white;
+}
+
+form input[type=number]::-webkit-outer-spin-button, form input[type=number]::-webkit-inner-spin-button{
+    appearance: none;
+}
+form select{
+    cursor: pointer;
+    appearance: none;
+}
+form input[type=number], form select{
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(59, 59, 59);
+    margin: 0 auto 20px;
+}
+form input[type=submit]{
+    width: 100%;
+    max-width: 100px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: .9rem;
+    font-weight: 200;
+    outline: none;
+    border: none;
+    margin: 10px auto 0;
+    border-radius: 7px;
+    background-color: rgb(65, 65, 226);
+}
