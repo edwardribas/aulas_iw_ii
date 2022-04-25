@@ -1,0 +1,96 @@
+/* Outfit Font */
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* General */
+html,body{
+    min-height: 100vh;
+}
+body{
+    background-color: rgb(23,23,23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Form */
+h1{
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+form{
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 470px;
+}
+form input::-webkit-outer-spin-button, form input::-webkit-inner-spin-button{
+    appearance: none;
+}
+form input{
+    display: inline-block;
+    width: 100%;
+    padding: .75rem 1.5rem;
+    color: rgb(220,220,220);
+    background-color: rgb(40,40,46);
+    border-radius: 7px;
+    font-size: .95rem;
+    border: none;
+    font-weight: 300;
+}
+form input::placeholder{
+    -webkit-user-select: none;
+    user-select: none;
+}
+form button{
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    font-size: .95rem;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: rgb(84, 235, 142);
+    transition: background-color .2s ease;
+}
+form button:hover{
+    background-color: rgb(68, 202, 119);
+}
+
+/* Result */
+.result{
+    display: block;
+    margin-top: 20px;
+    background-color: rgb(40,40,46);
+    color: rgb(220,220,220);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    font-size: .95rem;
+    max-width: 470px;
+    text-align: center;
+    padding: .75rem 1.5rem;
+    border-radius: 7px;
+    transition: .2s ease;
+}
+.result.visible{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
