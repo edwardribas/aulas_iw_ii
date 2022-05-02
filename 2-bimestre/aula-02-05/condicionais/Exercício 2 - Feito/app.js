@@ -28,6 +28,7 @@ form.onsubmit = e => {
             salarioAntigo.textContent = valor;
             valorPercentual.textContent = percentual;
             valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
 
         } else if (valor > 700 && valor <= 1500) {
             percentual = 10;
@@ -36,6 +37,7 @@ form.onsubmit = e => {
             salarioAntigo.textContent = valor;
             valorPercentual.textContent = percentual;
             valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
 
         } else {
             percentual = 5;
@@ -44,6 +46,7 @@ form.onsubmit = e => {
             salarioAntigo.textContent = valor;
             valorPercentual.textContent = percentual;
             valorAumento.textContent = aumento;
+            salarioNovo.textContent = ((valor * 100) + (aumento * 100)) / 100
         }
     }
 }
