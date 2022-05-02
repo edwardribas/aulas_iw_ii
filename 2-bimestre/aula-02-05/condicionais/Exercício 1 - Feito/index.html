@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- General -->
+    <title>Ex. 1 - Condicionais</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1 class="f-1-title">Vogal ou Consoante</h1>
+    <form class="f-1">
+        <input type="text" placeholder="Digite uma letra" maxlength="1">
+        <input type="submit" value="Verificar">
+    </form>
+    <p>-</p>
+
+    <!-- Script -->
+    <script>
+        const form = document.querySelector('form'),
+              input = document.querySelector('input[type=text]'),
+              p = document.querySelector('p')
+        ;
+
+        form.onsubmit = e => {
+            e.preventDefault();
+            let value = input.value.toUpperCase();
+            
+            if(value && isNaN(value)){
+                if (value == 'A' || value == 'E' || value == 'I' || value == 'O' || value == 'U'){
+                    p.textContent = 'É uma vogal.'
+                } else{
+                    p.textContent = 'É uma consoante.'
+                }
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
