@@ -1,0 +1,53 @@
+/* Outfit */
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* General */
+html,body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20,20,20);
+    color: rgb(220,220,220);
+    text-align: center;
+}
+
+/* Application */
+button{
+    border: none;
+    padding: 13px 20px;
+    font-size: 1rem;
+    background-color: #8b6bff;
+    color: rgb(30, 30, 30);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: transform .2s ease;
+}
+button:active{
+    transform: scale(0.9);
+}
+figure{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 200px;
+}
+img{
+    width: 100%;
+    display: block;
+}
