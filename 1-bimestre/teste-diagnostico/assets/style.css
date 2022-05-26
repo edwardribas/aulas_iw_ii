@@ -1,0 +1,175 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Settings */
+html{
+    height: 200vh;
+    font: 100% 'Outfit', sans-serif !important;
+}
+.waves{
+    background-image: url(img/waves.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 120px;
+}
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+::-webkit-scrollbar{
+    width: 11px;
+}
+::-webkit-scrollbar-thumb{
+    border: 3px solid white;
+    background-color: rgb(58, 57, 168);
+    border-radius: 20px;
+}
+img{
+    user-select: none;
+}
+::selection{
+    background-color: rgb(39, 100, 231);
+}
+
+/* Hero */
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 130px 0;
+    background-color: rgb(39, 100, 231);
+}
+.text-side{
+    padding: 0 80px;
+}
+.hero h1, p{
+    color: aliceblue;
+}
+.hero h1{
+    font-size: 2.2rem;
+}
+.hero p{
+    max-width: 380px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.hero .image-side{
+    display: flex;
+    justify-content: center;
+}
+.hero img{
+    width: 90%;
+    max-width: 550px;
+}
+
+/* Album */
+.album{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+
+    padding: 120px 30px;
+}
+.book{
+    width: 285px;
+    border-radius: 16px;
+    overflow: hidden;
+    align-self: start;
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.075);
+    transition: box-shadow .3s ease;
+}
+.book:hover{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.192);
+}
+.book:hover .book-image img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.book-image{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.book-image span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .35rem .80rem;
+    background-color: rgb(39, 100, 231);
+    color: white;
+    border-radius: 0 0 12px 0;
+    font-weight: 300;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.616);
+    font-size: .9rem;
+}
+.book-image img{
+    display: block;
+    width: 100%;
+    transform: scale(1.02);
+    filter: grayscale(1);
+    transition: filter .3s ease, transform .3s ease;
+}
+.book-desc{
+    padding: 1rem 1.5rem;
+}
+.book-desc h3{
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.book-desc p{
+    color: rgb(20, 20, 20);
+}
+.book-desc p:last-of-type{
+    margin-bottom: 20px;
+}
+.book-desc a{
+    background-color: rgb(39, 100, 231);
+    padding: .25rem .95rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer{
+    padding: 45px 10px;
+    width: 100%;
+    background-color: rgb(39, 100, 231);
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 1266px){
+    .hero{
+        padding: 80px 0 70px ;
+        text-align: center;
+    }
+    .hero p{
+        margin: 10px auto 0;
+    }
+}
+@media(max-width: 460px){
+    .text-side{
+        padding: 0 20px;
+    }
+}
