@@ -21,11 +21,16 @@
                 <input id="ano" type="number" placeholder="Ano de nascimento">
     
                 <fieldset id="genero">
-                    <input type="radio" name="gender" id="masculino" value="masc">
-                    <label for="masculino">Masculino</label>
                     
-                    <input type="radio" name="gender" id="feminino" value="fem">
-                    <label for="feminino">Feminino</label>
+                    <label for="masculino">
+                        <input type="radio" name="gender" id="masculino" value="masc">
+                        Masculino
+                    </label>
+                    
+                    <label for="feminino">
+                        <input type="radio" name="gender" id="feminino" value="fem">
+                        Feminino
+                    </label>
                 </fieldset>
     
                 <button>Analisar</button>
@@ -34,11 +39,11 @@
         
         <!-- Output -->
         <div class="output">
+            <h2>Análise</h2>
+            <p>Aguardando preenchimento dos dados...</p>
             <figure>
                 <img src="./img/children.svg" alt="Children playing.">
             </figure>
-            <h2>Aguardando envio do formulário...</h2>
-            <p></p>
         </div>
     </main>
 
