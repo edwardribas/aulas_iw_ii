@@ -24,15 +24,11 @@
     }
 
     const selectImage = (ageGroup, gender) => {
-        let src, ageList = ['bebê', 'criança', 'pré-adolescente', 'adolescente', 'adulto'];
+        let ageList = ['bebê', 'criança', 'pré-adolescente', 'adolescente', 'adulto'];
 
         ageList.forEach((element, index) => {
-            if (ageGroup === element) {
-                src = `./img/${gender}/${index+1}.png`;
-            }
+            if (ageGroup === element) return `./img/${gender}/${index+1}.png`;
         })
-        
-        return src;
     }
     
     form.onsubmit = e => {
