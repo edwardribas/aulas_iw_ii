@@ -1,0 +1,50 @@
+/* Outfit */
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* General */
+html,body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20,20,20);
+    color: rgb(220,220,220);
+}
+::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+/* Application */
+main{
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+main h1{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+#mychart{
+    border-radius: 10px;
+    overflow: hidden;
+}
